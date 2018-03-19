@@ -8,11 +8,13 @@
     <header class="main-header">
         <a href="index.html">Техномарт</a>
         <ul class="manage">
-          <li>Поиск</li>
+          <li>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <input type="text" name="search" placeholder="Поиск:">
+            </form>
+          </li>
           <li><a href="bookmarks.html">Закладки</a></li>
-          <li class="full"><a href="basket.html">Корзина:10
-
-          </a></li>
+          <li class="full"><a href="basket.html">Корзина:10</a></li>
           <li><a class="button" href="buy.html">Оформить заказ</a></li>
         </ul>
       <p class="header-description">
@@ -32,13 +34,13 @@
       <nav class="site-navigation">
         <ul class="site-navigation-list">
           <li class="site-navigation-item">
-            <a href="index.html">Главная</a>
+            <a href="">Главная</a>
           </li>
           <li class="site-navigation-item">
-            <a href="#company">Компания</a>
+            <a href="company">Компания</a>
           </li>
           <li class="site-navigation-item">
-            <a>Каталог</a>
+            <a href="catalog.html">Каталог</a>
           </li>
           <li class="site-navigation-item">
             <a href="news.html">Новости</a>
@@ -50,7 +52,7 @@
             <a href="delivery.html">Доставка</a>
           </li>
           <li class="site-navigation-item">
-            <a href="#contacts">Контакты</a>
+            <a href="contacts">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -65,7 +67,54 @@
       <h1>Перфораторы</h1>
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!--здесь будет форма-->
+        <span>Фильтр:</span>
+        <form class="punchers-filter" action="https://echo.htmlacademy.ru" method="post" oninput="minpriceoutput.value=filterpricerange.value">
+          <fieldset class="filter-price">
+            <legend>Цена:</legend>
+            <input type="range" name="filterpricerange" min="0" max="30000"><br>
+            <output name="minpriceoutput">0</output>
+            <output name="max-price">30000</output>
+          </fieldset>
+          <fieldset class="filer-brands">
+            <legend>Производители:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="bosch" checked>
+                <label for="bosch">bosch</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interscol" id="interscol">
+                <label for="interscol">Интерскол</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="makita" checked>
+                <label for="makita">Makita</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="dewalt">
+                <label for="dewalt">Dewalt</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="hitachi">
+                <label for="hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-battery">
+            <legend>Питание:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="electricity" id="battery" checked>
+                <label for="battery">Аккумуляторные</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="electricity" id="mains-operated ">
+                <label for="mains-operated ">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section class="punchers">
         <ul class="sorting">
@@ -185,9 +234,9 @@
         <h3 class="visible-hidden">Копирайт</h3>
         <p>© 2010–2017 Компания «Техномарт» Все права защищены</p>
         <ul class="footer-social">
-          <li class="social-item social-vk"><a href="#">vk</a></li>
-          <li class="social-item social-fb"><a href="#">fb</a></li>
-          <li class="social-item social-inst"><a href="#">inst</a></li>
+          <li class="social-item social-vk"><a href="https://vk.com">ВКонтакте</a></li>
+          <li class="social-item social-fb"><a href="https://www.facebook.com/">Фейсбук</a></li>
+          <li class="social-item social-inst"><a href="https://www.instagram.com/">Инстаграмм</a></li>
         </ul>
         <p>Обратная связь:
           <a href="https://htmlacademy.ru/contacts"> mail@htmlacademy.ru</a>
@@ -200,9 +249,11 @@
     <section class="modal madal-bucket">
       <h2 class="visually-hidden">Корзина</h2>
       <p>Товар добавлен в корзину!</p>
-      <a class="button" href="#">Оформить заказ</a>
-      <a class="button" href="#">Продолжить покупки</a>
-      <span>x</span>
+      <form class="add-to-basket" action="https://echo.htmlacademy.ru" method="post">
+        <a class="button" href="#">Оформить заказ</a>
+        <a class="button" href="#">Продолжить покупки</a>
+        <button class="modal-close" type="button">Закрыть</button>
+      </form>
     </section>
   </body>
 </html>
