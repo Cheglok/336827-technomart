@@ -14,11 +14,12 @@
         <ul class="manage">
           <li>
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <input type="text" name="search" placeholder="Поиск:">
+              <input type="text" name="search" id="search" placeholder="Поиск:">
+              <label for="search" class="visually-hidden">Поиск</label>
             </form>
           </li>
-          <li><a href="bookmarks.html">Закладки</a></li>
-          <li><a href="basket.html">Корзина</a></li>
+          <li><a href="bookmarks.html">Закладки: 0</a></li>
+          <li><a href="basket.html">Корзина: 0</a></li>
           <li><a class="button button-buy" href="buy.html">Оформить заказ</a></li>
         </ul>
       <p class="header-description">
@@ -35,7 +36,7 @@
       <nav class="site-navigation">
         <ul class="site-navigation-list">
           <li class="site-navigation-item">
-            <a href="">Главная</a>
+            <a>Главная</a>
           </li>
           <li class="site-navigation-item">
             <a href="company">Компания</a>
@@ -174,7 +175,7 @@
             </p>
           </li>
           <li class="service-slider">
-            <a href="guarantee.html"<h3>Гарантия</h3></a>
+            <a href="guarantee.html"><h3>Гарантия</h3></a>
             <p>Если купленный у нас товар поломается или заискрит,<br>
             а также в случае пожара, спровоцированного его возгаранием,<br>
             вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
@@ -205,7 +206,7 @@
         <h2>КОНТАКТЫ</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <button class="big-map" type="button">
-          <img src="img/map-preview.png" width="300" height="158" alt="Мини-карта">
+          <img src="img/map-preview.png" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         </button>
         <a class="button button-write-us" href="#">Заблудились? Напишите нам!</a>
       </section>
@@ -278,7 +279,7 @@
     </section>
     <section class="modal madal-map-popup">
       <h2 class="visually-hidden">Карта</h2>
-      <!--Здесь будет карта-->
+      <img src="img/big-map.jpg" width="1736" height="779" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>

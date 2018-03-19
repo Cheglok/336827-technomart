@@ -10,10 +10,11 @@
         <ul class="manage">
           <li>
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <input type="text" name="search" placeholder="Поиск:">
+              <input type="text" name="search" id="search" placeholder="Поиск:">
+              <label for="search" class="visually-hidden">Поиск</label>
             </form>
           </li>
-          <li><a href="bookmarks.html">Закладки</a></li>
+          <li><a href="bookmarks.html">Закладки: 0</a></li>
           <li class="full"><a href="basket.html">Корзина:10</a></li>
           <li><a class="button" href="buy.html">Оформить заказ</a></li>
         </ul>
@@ -40,7 +41,7 @@
             <a href="company">Компания</a>
           </li>
           <li class="site-navigation-item">
-            <a href="catalog.html">Каталог</a>
+            <a>Каталог</a>
           </li>
           <li class="site-navigation-item">
             <a href="news.html">Новости</a>
@@ -67,13 +68,16 @@
       <h1>Перфораторы</h1>
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <span>Фильтр:</span>
+        <h3>Фильтр:</h3>
         <form class="punchers-filter" action="https://echo.htmlacademy.ru" method="post" oninput="minpriceoutput.value=filterpricerange.value">
           <fieldset class="filter-price">
             <legend>Цена:</legend>
-            <input type="range" name="filterpricerange" min="0" max="30000"><br>
-            <output name="minpriceoutput">0</output>
-            <output name="max-price">30000</output>
+            <input type="range" name="filterpricerange" id="filterpricerange" min="0" max="30000"><br>
+            <label for="filterpricerange" class="visually-hidden">Диапазон цены</label>
+            <output name="minpriceoutput" id="minpriceoutput">0</output>
+            <label for="minpriceoutput" class="visually-hidden">Нижняя граница цены</label>
+            <output name="maxprice" id="maxprice">30000</output>
+            <label for="maxprice" class="visually-hidden">Верхняя граница цены</label>
           </fieldset>
           <fieldset class="filer-brands">
             <legend>Производители:</legend>
@@ -108,17 +112,18 @@
                 <label for="battery">Аккумуляторные</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="electricity" id="mains-operated ">
-                <label for="mains-operated ">Сетевые</label>
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="electricity" id="mains-operated">
+                <label for="mains-operated">Сетевые</label>
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button" type="submit">Показать</button>
         </form>
       </section>
       <section class="punchers">
+        <h2 class="visually-hidden">Отфильтрованные перфораторы</h2>
+        <h3>Сортировка:</h3>
         <ul class="sorting">
-          <li><a href="#">Сортировка:</a></li>
           <li><a href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По функционалу</a></li>
@@ -249,11 +254,9 @@
     <section class="modal madal-bucket">
       <h2 class="visually-hidden">Корзина</h2>
       <p>Товар добавлен в корзину!</p>
-      <form class="add-to-basket" action="https://echo.htmlacademy.ru" method="post">
-        <a class="button" href="#">Оформить заказ</a>
-        <a class="button" href="#">Продолжить покупки</a>
-        <button class="modal-close" type="button">Закрыть</button>
-      </form>
+      <a class="button" href="#">Оформить заказ</a>
+      <a class="button" href="#">Продолжить покупки</a>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
