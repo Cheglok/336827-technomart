@@ -3,25 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:700i" rel="stylesheet" type="text/css">
-    <!-- font-family: "Cuprum", "Arial", sans-serif; -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-    <!-- font-family: "PT Sans", "Arial", sans-serif; -->
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- font-family: "Cuprum", Arial, sans-serif; -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- font-family: "PT Sans", Arial, sans-serif; -->
+    <link href="normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-        <a>Техномарт</a>
+      <div class="header-top">
+        <a class="logo">Техномарт</a>
         <ul class="manage">
           <li>
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <label for="search" class="visually-hidden">Поиск:</label>
               <input type="text" name="search" id="search" placeholder="Поиск:">
-              <label for="search" class="visually-hidden">Поиск</label>
             </form>
           </li>
           <li><a href="bookmarks.html">Закладки: 0</a></li>
           <li><a href="basket.html">Корзина: 0</a></li>
           <li><a class="button button-buy" href="buy.html">Оформить заказ</a></li>
         </ul>
+      </div>
       <p class="header-description">
         Интернет-магазин<br>
         строительных материалов<br>
@@ -64,25 +68,25 @@
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="features-list">
-          <li class="materials">
+          <li class="features-item materials">
             <h3>Материалы</h3>
             <p><a href="materials.html">На любой вкус</a></p>
           </li>
-          <li class="tools">
+          <li class="features-item tools">
             <h3>Инструмент</h3>
             <p><a href="tools.html">На все случаи</a></p>
           </li>
-          <li class="devices">
+          <li class="features-item devices">
             <h3>Техника</h3>
             <p><a href="devices.html">Для стройки</a></p>
           </li>
-          <li class="discounts">
+          <li class="features-item discounts">
             <h3>Скидки 50%</h3>
             <p><a href="discounts.html">На 350 товаров</a></p>
           </li>
-          <li class="delivery">
+          <li class="features-item delivery">
             <h3>Доставка</h3>
-            <p><a href="delivery.html">Бесплатно</a></p>
+            <p><a href="features-item delivery.html">Бесплатно</a></p>
           </li>
           <li class="slider">
             <h3>Дрели</h3>
@@ -94,42 +98,46 @@
         </ul>
       </section>
       <section class="popular-tools">
-        <h2>Популярные товары:</h2>
-        <a class="button button-all-popylar" href="popular.html">
-          Все популярные товары
-        </a>
+        <div class="popular-tools-top">
+          <h2>Популярные товары:</h2>
+          <a class="button button-all-popylar" href="popular.html">
+            Все популярные товары
+          </a>
+        </div>
         <ul class="popular-tools-list">
           <li class="popular-tools-item">
             <h3>Перфоратор BOSCH BFG 9000</h3>
             <img src="img/puncher-9000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
-            <p>32500 р</p>
-            <a class="button button-popular" href="catalog-item.html">22500 р.</a>
+            <p>32500 Р</p>
+            <a class="button button-popular" href="catalog-item.html">22500 Р.</a>
           </li>
           <li class="popular-tools-item">
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <img src="img/puncher-3000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-            <p>22500 р</p>
-            <a class="button button-popular" href="catalog-item.html">15500 р.</a>
+            <p>22500 Р</p>
+            <a class="button button-popular" href="catalog-item.html">15500 Р.</a>
           </li>
           <li class="popular-tools-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <img src="img/puncher-6000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-            <p>30500 р</p>
-            <a class="button button-popular" href="catalog-item.html">25500 р.</a>
+            <p>30500 Р</p>
+            <a class="button button-popular" href="catalog-item.html">25500 Р.</a>
           </li>
           <li class="popular-tools-item">
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <img src="img/puncher-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-            <p class="visually-hidden">32500 р</p>
-            <a class="button button-popular" href="catalog-item.html">22500 р.</a>
+            <p class="visually-hidden">32500 Р</p><br>
+            <a class="button button-popular" href="catalog-item.html">22500 Р.</a>
           </li>
         </ul>
       </section>
       <section class="brands">
-        <h2>Популярные производители:</h2>
-        <a class="button button-brands" href="brands.html">
-          Все производители
-        </a>
+        <div class="brands-top">
+          <h2>Популярные производители:</h2>
+          <a class="button button-brands" href="brands.html">
+            Все производители
+          </a>
+        </div>
         <ul class="brands-list">
           <li class="brands-item">
             <a href="#"><img src="img/bosch.png" width="126" height="37" alt="Bosch"></a>
@@ -161,12 +169,12 @@
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <ul class="services-list">
-          <li>Доставка</li>
+          <li class="current">Доставка</li>
           <li>Гарантия</li>
           <li>Кредит</li>
         </ul>
         <ul class="service-slider">
-          <li class="service-slider">
+          <li class="service-slider-item delivery-slider">
             <a href="delivery.html"><h3>Доставка</h3></a>
             <p>Мы с удовольствием доставим ваш товар прямо<br>
             к вашему подъезду совершенно бесплатно!<br>
@@ -174,7 +182,7 @@
             поднимая его на ваш этаж!
             </p>
           </li>
-          <li class="service-slider">
+          <li class="service-slider-item guarantee-slider">
             <a href="guarantee.html"><h3>Гарантия</h3></a>
             <p>Если купленный у нас товар поломается или заискрит,<br>
             а также в случае пожара, спровоцированного его возгаранием,<br>
@@ -182,7 +190,7 @@
             сгоревший товар на новый.<br>
             Дом уж восстановите как-нибудь сами.
           </li>
-          <li class="service-slider">
+          <li class="service-slider-item credit-slider">
             <a href="credit"><h3>Кредит</h3></a>
             <p>Залезть в долговую яму стало проще!<br>
             Кредитные консультанты придут вам на помощь.
