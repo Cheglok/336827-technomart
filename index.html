@@ -17,13 +17,13 @@
         <ul class="manage">
           <li>
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <label for="search" class="visually-hidden">Поиск:</label>
-              <input type="text" name="search" id="search" placeholder="Поиск:">
+              <label for="search">Поиск:</label>
+              <input class="search" type="text" name="search" id="search">
             </form>
           </li>
           <li><a href="bookmarks.html">Закладки: 0</a></li>
           <li><a href="basket.html">Корзина: 0</a></li>
-          <li><a class="button button-buy" href="buy.html">Оформить заказ</a></li>
+          <li><a class="button button-order" href="order.html">Оформить заказ</a></li>
         </ul>
       </div>
       <p class="header-description">
@@ -90,7 +90,7 @@
           </li>
           <li class="slider">
             <h3>Дрели</h3>
-            <p>Соседям на радость</p>
+            <p>Соседям на радость!</p>
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
             <a class="button button-slider" href="catalog.html">Открыть каталог</a>
@@ -105,29 +105,29 @@
           </a>
         </div>
         <ul class="popular-tools-list">
-          <li class="popular-tools-item">
+          <li class="tools-item">
             <h3>Перфоратор BOSCH BFG 9000</h3>
             <img src="img/puncher-9000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
-            <p>32500 Р</p>
-            <a class="button button-popular" href="catalog-item.html">22500 Р.</a>
+            <p>32500 Р.</p>
+            <a class="button tools-buy-button" href="catalog-item.html">22500 Р.</a>
           </li>
-          <li class="popular-tools-item">
+          <li class="tools-item">
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <img src="img/puncher-3000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-            <p>22500 Р</p>
-            <a class="button button-popular" href="catalog-item.html">15500 Р.</a>
+            <p>22500 Р.</p>
+            <a class="button tools-buy-button" href="catalog-item.html">15500 Р.</a>
           </li>
-          <li class="popular-tools-item">
+          <li class="tools-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <img src="img/puncher-6000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-            <p>30500 Р</p>
-            <a class="button button-popular" href="catalog-item.html">25500 Р.</a>
+            <p>30500 Р.</p>
+            <a class="button tools-buy-button" href="catalog-item.html">25500 Р.</a>
           </li>
-          <li class="popular-tools-item">
+          <li class="tools-item">
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <img src="img/puncher-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-            <p class="visually-hidden">32500 Р</p><br>
-            <a class="button button-popular" href="catalog-item.html">22500 Р.</a>
+            <p class="visually-hidden">32500 Р.</p><br>
+            <a class="button tools-buy-button" href="catalog-item.html">22500 Р.</a>
           </li>
         </ul>
       </section>
@@ -200,10 +200,10 @@
         </ul>
       </section>
       <section class="company" >
-        <h2>КОМПАНИЯ «Техномарт»</h2>
+        <h2>Компания «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями: </p>
-        <ul>
+        <ul class="delivery-company">
           <li>Деловые линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
@@ -211,22 +211,23 @@
         <a class="button button-company" href="company.html">Подробнее о компании</a>
       </section>
       <section class="contacts">
-        <h2>КОНТАКТЫ</h2>
+        <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <button class="big-map" type="button">
           <img src="img/map-preview.png" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-        </button>
+        </button><br>
         <a class="button button-write-us" href="#">Заблудились? Напишите нам!</a>
       </section>
     </main>
     <footer class="main-footer">
       <section class="footer-top">
-        <h2>Техномарт</h2>
+        <h2 class="visually-hidden">Нижнее меню</h2>
+        <a class="logo">Техномарт</a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55</p>
         <nav class="footer-navigation">
           <ul class="footer-navigation-list">
-            <li class="footer-navigation-item">
+            <li class="footer-navigation-item current-footer-navigation-item">
               <a href="company.html">Компания</a>
             </li>
             <li class="footer-navigation-item">
@@ -257,7 +258,7 @@
         </nav>
       </section>
       <section class="footer-bottom">
-        <h3 class="visible-hidden">Копирайт</h3>
+        <h3 class="visually-hidden">Копирайт</h3>
         <p>© 2010–2017 Компания «Техномарт» Все права защищены</p>
         <ul class="footer-social">
           <li class="social-item social-vk"><a href="https://vk.com">ВКонтакте</a></li>
@@ -273,19 +274,21 @@
       </section>
     </footer>
     <section class="modal modal-write-us">
-      <h2 class="visially-hidden">Напишите нам</h2>
+      <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-        <label for="user-name">Ваше имя</label>
+        <label for="user-name">Ваше имя:</label>
         <input type="text" name="user-name" id="user-name" placeholder="Представьтесь, пожалуйста">
         <label for="user-email">Ваш e-mail:</label>
         <input type="email" name="user-email" id="user-email" placeholder="Для отправки ответа">
         <label for="letter">Текст письма:</label>
         <textarea name="letter" id="letter" placeholder="В свободной форме" rows="5" cols="30"></textarea>
-        <button class="write-us-submit" type="submit">Отправить</button>
+        <div class="modal-bottom">
+          <button class="button write-us-submit" type="submit">Отправить</button>
+        </div>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-    <section class="modal madal-map-popup">
+    <section class="modal modal-map-popup">
       <h2 class="visually-hidden">Карта</h2>
       <img src="img/big-map.jpg" width="1736" height="779" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <button class="modal-close" type="button">Закрыть</button>

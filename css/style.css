@@ -20,14 +20,20 @@ a {
   margin: -1px;
 }
 .button {
+  font: inherit;
+  font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
-  text-align: center;
   background-color: #ee3643;
+  border: none;
+  text-transform: uppercase;
 }
 .main-header {
   background-color: #f3f7f9;
+}
+.inner-header {
+  background-color: #f2f6f8;
 }
 .header-top {
   background-color: #293449;
@@ -46,17 +52,23 @@ a {
 .manage {
   list-style: none;
 }
-.search-form {
-  border: none;
+.search-form input {
   background-color: #293449;
+  border: none;
+  font: inherit;
+  color:inherit;
 }
 .header-top a {
   color: #ffffff;
 }
-.button-buy {
+.full{
+  background-color: #ee3643;
+}
+.button-order {
 font-size: 17px;
 line-height: 18px;
 background-color: #63a63e;
+text-transform: none;
 }
 .header-description {
   font-size: 16px;
@@ -85,14 +97,20 @@ background-color: #63a63e;
   color: #000000;
   background-color: #ffffff;
 }
+.user-navigation .user-subnavigation {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #32425c;
+}
 .site-navigation-list {
   list-style: none;
-  background-color: #32425c;
-  border-bottom: 5px solid #293449;
 }
 .site-navigation-list a {
   line-height: 17px;
   color: #ffffff;
+  background-color: #32425c;
+  border-bottom: 5px solid #293449;
 }
 .features-list {
   list-style: none;
@@ -150,22 +168,27 @@ background-color: #63a63e;
 .popular-tools-list {
   list-style: none;
 }
-.popular-tools-item,
+.tools-item,
 .brands-item {
   border: 1px solid #eaeaea;
   text-align: center;
 }
-.popular-tools-item h3 {
+.tools-item h3 {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
 }
-.popular-tools-item p {
+.tools-item p {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   color: #a9a9a9;
   text-decoration: line-through;
+}
+.tools-buy-button {
+  font-size: 17px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
 }
 .brands-list {
   list-style: none;
@@ -203,7 +226,7 @@ background-color: #63a63e;
 .service-slider {
   list-style: none;
 }
-.service-slider-item a {
+.service-slider-item a:first-of-type {
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
@@ -213,5 +236,203 @@ background-color: #63a63e;
   background-repeat: no-repeat;
 }
 .guarantee-slider {
-  background-image: url("img/guarantee.png");
+  background-image: url("../img/guarantee.png");
+  background-repeat: no-repeat;
+}
+.credit-slider {
+  background-image: url("../img/credit.png");
+  background-repeat: no-repeat;
+}
+.company h2,
+.contacts h2,
+.main-footer h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.company p,
+.contacts p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+.delivery-company {
+  list-style: none;
+}
+.delivery-company li {
+  font-size: 18px;
+  line-height: 20px;
+}
+.big-map {
+  border: none;
+}
+.footer-top {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #32425c;
+}
+.footer-navigation-list {
+  list-style: none;
+}
+.footer-navigation-item a {
+  color: #ffffff;
+}
+.current-footer-navigation-item a{
+  opacity: 0.1;
+}
+.footer-navigation-item:nth-child(n+6) a {
+  color: #ffd180;
+}
+.footer-bottom {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #293449;
+}
+.footer-social {
+  list-style: none;
+}
+.footer-bottom a {
+  color: #ffd180;
+}
+.social-item a {
+  color: #ffffff;
+}
+.modal-write-us {
+  font-size: 18px;
+  line-height: 18px;
+  background-color: #ffffff;
+  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.75)
+}
+.modal-write-us input,
+.modal-write-us textarea {
+  font-size:13px;
+  line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #a9a9a9;
+  border: 2px solid #dee3e4;
+}
+.modal-map-popup{
+  box-shadow: 0px 0px 16px 8px rgba(47, 42, 43, 0.5)
+}
+.breadcrumbs {
+  list-style: none;
+}
+.inner-main {
+  font-family: "PT Sans", Arial, sans-serif;
+}
+.breadcrumbs a {
+  font-size: 13px;
+  color: #000000;
+}
+.page-title {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  background-color: #f2f6f8;
+  font-family: "Cuprum", Arial, sans-serif;
+}
+.filter h3 {
+  font-size: 13px;
+  background-color: #f7f3ec;
+}
+.filter fieldset {
+  border: none;
+}
+.filter hr {
+  color: #818181;
+  opacity: 0.35;
+}
+.filter-price input {
+  background-color: #f7f3ec;
+}
+.filter legend {
+  line-height: 30px;
+  font-weight: bold;
+}
+.filter-list {
+  list-style: none;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.filter button {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+}
+.sorting {
+  list-style: none;
+  background-color: #f7f3ec;
+}
+.sorting span {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.sorting a {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #ee3643;
+}
+.sorting .current-sorting {
+  color: #ee3643;
+  border: none;
+}
+.punchers-list{
+  list-style: none;
+}
+.button-buy {
+  font-family: "Cuprum", Arial, sans-serif;
+  background-color: #63a63e;
+  border-bottom: 3px solid #367315;
+}
+.button-bookmark {
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+.pagination-list {
+  list-style: none;
+}
+.pagination-item a {
+  font-size: 13px;
+  color: #000000;
+  border: 1px solid #e5e5e5;
+}
+.pagination-item-current {
+  background-color: #ee3643;
+}
+.about-punchers {
+  background-color: #f2f6f8;
+}
+.about-punchers h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+.about-punchers p {
+  font-size: 13px;
+  line-height: 24px;
+}
+.modal-bucket {
+  background-color: #ffffff;
+  border-top: 7px solid #ee3643;
+  box-shadow: 20px 0px 40px rgba(41, 52, 73, 0.75)
+}
+.modal-bucket p {
+  font-size: 30px;
+  line-height: 30px;
+}
+.modal-bottom {
+  background-color: #f1f1f1;
+}
+.button-modal-continue {
+  color: #000000;
+  background-color: #ffffff;
 }
