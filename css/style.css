@@ -49,13 +49,18 @@ a {
   background-color: #ee3643;
   border-bottom: 5px solid #b52933;
 }
+.red-button:hover,
+.red-button-focus {
+  background-color: #ca2c37;
+}
+.red-button:active {
+  background-color: #ba2732;
+}
 .logo:hover,
 .logo:focus {
-  background-color: #ca2c37;
   border-bottom: 5px solid #9a212a;
 }
 .logo:active {
-  background-color: #ba2732;
   border-bottom: 5px solid #8e1e26;
 }
 .manage {
@@ -136,11 +141,12 @@ a.button-order:active {
   color: #ee3643;
 }
 .user-navigation .user-name:hover,
-.user-navigation .user-name:hover {
+.user-navigation .user-name:focus {
   color: #000000;
 }
-.user-navigation a:active {
-  color: rgba(0, 0, 0, 0.3)
+.user-navigation a:active,
+.user-navigation .user-name:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 .user-navigation .user-subnavigation {
   font-size: 16px;
@@ -219,13 +225,6 @@ a.button-order:active {
 .slider p {
   font-size: 18px;
   line-height: 24px;
-}
-.slider .button-slider:hover,
-.slider .button-slider:focus {
-  background-color: #ca2c37;
-}
-.slider .button-slider:active {
-  background-color: #ba2732;
 }
 .popular-tools-top {
   background-color: #f9f5f0;
