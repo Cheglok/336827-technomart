@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
-    <!-- font-family: "Cuprum", Arial, sans-serif; -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <!-- font-family: "PT Sans", Arial, sans-serif; -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     <link href="normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -18,12 +16,11 @@
           <ul class="manage">
             <li>
               <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                <label for="search">Поиск:</label>
-                <input class="search" type="text" name="search" id="search">
+                <input class="search" type="text" name="search" id="search" placeholder="Поиск:">
               </form>
             </li>
-            <li><a href="bookmarks.html">Закладки: 0</a></li>
-            <li><a href="basket.html">Корзина: 0</a></li>
+            <li><a class="manage-bookmark" href="bookmarks.html">Закладки: 0</a></li>
+            <li><a class="manage-basket" href="basket.html">Корзина: 0</a></li>
             <li><a class="button button-order" href="order.html">Оформить заказ</a></li>
           </ul>
         </div>
@@ -31,15 +28,15 @@
       <div class="header-bottom">
         <div class="container">
           <p class="header-description">
-            Интернет-магазин строительных материалов и инструментов для ремонта
+            Интернет-магазин строительных материалов<br> и инструментов для ремонта
           </p>
           <div class="header-contacts-wrapper">
-            <p class="phone">+7(812)555-05-55</p>
+            <p class="phone">+7 (812) 555-05-55</p>
             <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <ul class="user-navigation">
-            <li><a href="#">Войти</a></li>
-            <li><a href="#">Регистрация</a></li>
+            <li><a class="enter" href="#">Войти</a></li>
+            <li><a class="registration" href="#">Регистрация</a></li>
             <!-- <li><a class="user-name" href="#">Равшан Джамшутович</a></li>
             <li><a class="user-subnavigation" href="#">Мои заказы</a></li>
             <li><a class="user-subnavigation" href="#">Личный кабинет</a></li> -->
@@ -78,32 +75,38 @@
         <section class="features">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="features-list">
-            <li class="slider">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <a class="button red-button" href="catalog.html">Открыть каталог</a>
+            <li class="slider-promo">
+              <div class="slide-1">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+              </div>
+              <div class="slide-2">
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
+               </div>
+               <div class="slider-promo-manage">
+                 <a class="button red-button" href="catalog.html">Открыть каталог</a>
+               </div>
             </li>
             <li class="features-item materials">
               <h3>Материалы</h3>
-              <p><a href="materials.html">На любой вкус</a></p>
+              <a href="materials.html">На любой вкус</a>
             </li>
             <li class="features-item tools">
               <h3>Инструмент</h3>
-              <p><a href="tools.html">На все случаи</a></p>
+              <a href="tools.html">На все случаи</a>
             </li>
             <li class="features-item devices">
               <h3>Техника</h3>
-              <p><a href="devices.html">Для стройки</a></p>
+              <a href="devices.html">Для стройки</a>
             </li>
             <li class="features-item discounts">
               <h3>Скидки 50%</h3>
-              <p><a href="discounts.html">На 350 товаров</a></p>
+              <a href="discounts.html">На 350 товаров</a>
             </li>
             <li class="features-item delivery">
               <h3>Доставка</h3>
-              <p><a href="delivery.html">Бесплатно</a></p>
+              <a href="delivery.html">Бесплатно</a>
             </li>
           </ul>
         </section>
@@ -168,7 +171,7 @@
                 </li>
               </ul>
               <img src="img/puncher-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-              <p class="visually-hidden">32500 Р.</p>
+              <p class="visually-hidden"></p>
               <p class="new-price">22500 Р.</p>
             </li>
           </ul>

@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
-  <!-- font-family: "Cuprum", Arial, sans-serif; -->
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <!-- font-family: "PT Sans", Arial, sans-serif; -->
-  <link href="normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
-  <body>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Техномарт</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body class="inner-page">
     <header class="main-header inner-header">
       <div class="header-top">
         <div class="container">
@@ -22,8 +20,8 @@
                 <input class="search" type="text" name="search" id="search">
               </form>
             </li>
-            <li><a href="bookmarks.html">Закладки: 0</a></li>
-            <li><a class="full" href="basket.html">Корзина: 10</a></li>
+            <li><a class="manage-bookmark" href="bookmarks.html">Закладки: 0</a></li>
+            <li><a class="manage-basket" href="basket.html">Корзина: 0</a></li>
             <li><a class="button button-order" href="order.html">Оформить заказ</a></li>
           </ul>
         </div>
@@ -34,12 +32,12 @@
             Интернет-магазин строительных материалов и инструментов для ремонта
           </p>
           <div class="header-contacts-wrapper">
-            <p class="phone">+7(812)555-05-55</p>
+            <p class="phone">+7 (812) 555-05-55</p>
             <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <ul class="user-navigation">
-            <!-- <li><a href="#">Войти</a></li> -->
-            <!-- <li><a href="#">Регистрация</a></li> -->
+            <!-- <li><a class="enter" href="#">Войти</a></li>
+            <li><a class="registration" href="#">Регистрация</a></li> -->
             <li class="user-name"><a href="#">Равшан Джамшутович</a></li>
             <li><a class="user-subnavigation" href="#">Мои заказы</a></li>
             <li><a class="user-subnavigation" href="#">Личный кабинет</a></li>
@@ -278,14 +276,14 @@
                 <p class="new-price">22500 Р.</p>
               </li>
             </ul>
+            <ul class="pagination-list">
+              <li class="pagination-item pagination-item-current"><a>1</a></li>
+              <li class="pagination-item"><a href="#">2</a></li>
+              <li class="pagination-item"><a href="#">3</a></li>
+              <li class="pagination-item"><a href="#">Следующая</a></li>
+            </ul>
           </section>
         </div>
-        <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a>1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item"><a href="#">Следующая</a></li>
-        </ul>
       </div>
       <section class="about-punchers">
         <div class="container">
