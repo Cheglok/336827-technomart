@@ -133,7 +133,7 @@ input[type="radio"].visually-hidden {
   font: inherit;
   color: #ffffff;
 }
-.search-form input[type="text"]::-webkit-input-placeholder {
+.search-form input::placeholder {
   color: #ffffff;
   opacity: 1;
 }
@@ -791,28 +791,86 @@ a.button-order:active {
 }
 .services {
   background-color: #f4f8f9;
+  padding-top: 60px;
+  padding-bottom: 54px;
 }
 .services h2 {
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  font-weight: 400;
 }
-.services p {
+p.services-tagline {
+  width: 400px;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
-.services-slider-wrapper{
-  display: flex;
-  justify-content: space-between;
-}
-.services-list {
-  width: 240px;
+.services-slider {
+  position: relative;
+  min-height: 274px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+.services-slider-item {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+}
+.delivery-slider {
+  z-index: 5;
+}
+.guarantee-slider {
+  /* z-index: 4; */
+}
+.credit-slider {
+  z-index: 3;
+}
+.service-slide-wrap {
+  display: flex;
+}
+.delivery-slider .services-description {
+  background-image: url("../img/delivery.png");
+  background-position: 150px 67px;
+}
+.guarantee-slider .services-description {
+  background-image: url("../img/guarantee.png");
+  background-position: right 67px;
+}
+.credit-slider .services-description {
+  background-image: url("../img/credit.png");
+  background-position: right 67px;
+}
+.services-list {
+  position: relative;
+  margin: 0;
+  margin-right: 80px;
+  padding: 0;
+  padding-top: 44px;
+  padding-bottom: 48px;
+  width: 240px;
+  list-style: none;
+}
+.services-list::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/shadow.png");
+  right: 0px;
+  top: -5px;
+}
 .services-list li {
+  padding-top: 14px;
+  padding-bottom: 17px;
+  padding-left: 22px;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -820,34 +878,42 @@ a.button-order:active {
   background-color: #32425c;
 }
 .services-list .current {
-  font-size: 21px;
-  line-height: 30px;
-  font-weight: bold;
   color: #32425c;
   background-color: #ffffff;
 }
-.services-slider {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 640px;
+.services-slider-item .services-description {
+  flex-basis: 620px;
+  padding-top: 43px;
+  background-repeat: no-repeat;
 }
-.services-slider-item a:first-of-type {
+.services-description a {
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 400;
 }
-.delivery-slider {
-  background-image: url("../img/delivery.png");
-  background-repeat: no-repeat;
+.services-description .button {
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px 43px;
 }
-.guarantee-slider {
-  background-image: url("../img/guarantee.png");
-  background-repeat: no-repeat;
+.services-description h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
 }
-.credit-slider {
-  background-image: url("../img/credit.png");
-  background-repeat: no-repeat;
+.services-description p {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 .wrapper-company-contacts {
   display: flex;
@@ -859,27 +925,60 @@ a.button-order:active {
   width: 540px;
 }
 .company h2,
-.contacts h2,
-.main-footer h2 {
+.contacts h2 {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
 }
 .company p,
 .contacts p {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
   font-size: 13px;
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
 }
 .delivery-company {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  margin-bottom: 15px;
 }
 .delivery-company li {
+  position: relative;
+  padding-bottom: 20px;
+  padding-left: 36px;
   font-size: 18px;
   line-height: 20px;
 }
+.delivery-company li::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+  top: 10px;
+  left: 0px;
+}
+.company a {
+  padding: 10px 40px;
+}
 .contacts {
   width: 300px;
+}
+.contacts .map {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.contacts .red-button {
+  margin-top: 40px;
+  padding: 10px 60px;
 }
 .footer-top {
   font-size: 18px;
@@ -894,7 +993,15 @@ a.button-order:active {
   padding-bottom: 52px;
 }
 .footer-address-wrapper {
-  width: 350px;
+  width: 330px;
+}
+.footer-address-wrapper .logo {
+  margin-right: 110px;
+}
+.footer-address-wrapper p {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
 }
 .footer-navigation {
   width: 550px;

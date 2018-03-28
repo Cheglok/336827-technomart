@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- font-family: "Cuprum", Arial, sans-serif; -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- font-family: "PT Sans", Arial, sans-serif; -->
     <link href="normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -28,7 +30,7 @@
       <div class="header-bottom">
         <div class="container">
           <p class="header-description">
-            Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта
+            Интернет-магазин строительных материалов<br>и инструментов для ремонта
           </p>
           <div class="header-contacts-wrapper">
             <p class="phone">+7 (812) 555-05-55</p>
@@ -230,46 +232,66 @@
       <section class="services">
         <div class="container">
           <h2>Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <div class="services-slider-wrapper">
-            <ul class="services-list">
-              <li class="current">Доставка</li>
-              <li>Гарантия</li>
-              <li>Кредит</li>
-            </ul>
-            <ul class="services-slider">
-              <li class="services-slider-item delivery-slider">
-                <a href="delivery.html"><h3>Доставка</h3></a>
-                <p>Мы с удовольствием доставим ваш товар прямо<br>
-                к вашему подъезду совершенно бесплатно!<br>
-                Ведь мы неплохо заработаем,<br>
-                поднимая его на ваш этаж!
-                </p>
-              </li>
-              <li class="services-slider-item guarantee-slider">
-                <a href="guarantee.html"><h3>Гарантия</h3></a>
-                <p>Если купленный у нас товар поломается или заискрит,<br>
-                а также в случае пожара, спровоцированного его возгаранием,<br>
-                вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
-                сгоревший товар на новый.<br>
-                Дом уж восстановите как-нибудь сами.
-              </li>
-              <li class="services-slider-item credit-slider">
-                <a href="credit"><h3>Кредит</h3></a>
-                <p>Залезть в долговую яму стало проще!<br>
-                Кредитные консультанты придут вам на помощь.
-                </p>
-                <a class="button red-button" href="#">Отправить заявку</a>
-              </li>
-            </ul>
-          </div>
+          <p class="services-tagline">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <ul class="services-slider">
+            <li class="services-slider-item delivery-slider">
+              <div class="service-slide-wrap">
+                <ul class="services-list">
+                  <li class="current">Доставка</li>
+                  <li>Гарантия</li>
+                  <li>Кредит</li>
+                </ul>
+                <div class="services-description">
+                  <h3><a href="delivery.html">Доставка</a></h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо<br>
+                  к вашему подъезду совершенно бесплатно!<br>
+                  Ведь мы неплохо заработаем,<br>
+                  поднимая его на ваш этаж!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="services-slider-item guarantee-slider">
+              <div class="service-slide-wrap">
+                <ul class="services-list">
+                  <li>Доставка</li>
+                  <li class="current">Гарантия</li>
+                  <li>Кредит</li>
+                </ul>
+                <div class="services-description">
+                  <h3><a href="guarantee.html">Гарантия</a></h3>
+                  <p>Если купленный у нас товар поломается или заискрит,<br>
+                  а также в случае пожара, спровоцированного его возгаранием,<br>
+                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                  сгоревший товар на новый.<br>
+                  Дом уж восстановите как-нибудь сами.
+                </div>
+              </div>
+            </li>
+            <li class="services-slider-item credit-slider">
+              <div class="service-slide-wrap">
+                <ul class="services-list credit-slider">
+                  <li>Доставка</li>
+                  <li>Гарантия</li>
+                  <li class="current">Кредит</li>
+                </ul>
+                <div class="services-description">
+                  <h3><a href="credit">Кредит</a></h3>
+                  <p>Залезть в долговую яму стало проще!<br>
+                  Кредитные консультанты придут вам на помощь.
+                  </p>
+                  <a class="button red-button" href="#">Отправить заявку</a>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <div class="wrapper-company-contacts container">
         <section class="company" >
           <h2>Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями: </p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями: </p>
           <ul class="delivery-company">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
@@ -280,7 +302,7 @@
         <section class="contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a class="big-map" href="big-map.html">
+          <a class="map" href="big-map.html">
             <img src="img/map-preview.png" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
           </a>
           <a class="button red-button" href="#">Заблудились? Напишите нам!</a>
