@@ -214,11 +214,11 @@ a.button-order:active {
   margin: 0;
   padding-top: 3px;
   padding-left: 52px;
-  padding-right: 30px;
+  padding-right: 48px;
   padding-bottom: 42px;
   margin-right: 20px;
   text-align: left;
-  width: 218px;
+  width: 200px;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -590,9 +590,9 @@ a.button-order:active {
 .popular-tools-title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   background-color: #f9f5f0;
-  padding-bottom: 30px;
+  padding-bottom: 29px;
   padding-top: 25px;
   padding-right: 24px;
   padding-left: 27px;
@@ -610,11 +610,13 @@ a.button-order:active {
 .popular-tools-title a {
   padding-left: 55px;
   padding-right: 55px;
+  padding-bottom: 8px;
 }
 .popular-tools-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   list-style: none;
 }
@@ -624,6 +626,7 @@ a.button-order:active {
   margin-right: 20px;
   border: 1px solid #eaeaea;
   text-align: center;
+  position: relative;
 }
 .popular-tools-list .tools-item:nth-child(4n) {
   margin-right: 0px;
@@ -635,25 +638,32 @@ a.button-order:active {
 .tools-item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5)
 }
-.tools-item:hover img,
-.tools-item:focus img {
+.tools-item img {
+  max-width: 100%;
+  heifht: auto;
+  margin-bottom: 4px;
+}
+.tools-item-options {
+  position: absolute;
+  top: 0px;
+  height: 0px;
+  list-style: none;
   display: none;
+  margin: 0;
+  padding: 0;
 }
 .tools-item:hover .tools-item-options,
 .tools-item:focus .tools-item-options {
   display: block;
 }
 .tools-item h3 {
+  margin: 0;
+  padding: 0 30px;
+  padding-bottom: 12px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
-}
-.tools-item-options {
-  list-style: none;
-  display: none;
-  margin: 0;
-  padding: 0;
 }
 .button-buy {
   font-family: "Cuprum", Arial, sans-serif;
@@ -681,17 +691,43 @@ a.button-order:active {
   border: 3px solid #32425c;
   opacity: 0.3;
 }
+.old-price-placeholder {
+  min-height: 28px;
+}
 .tools-item p {
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 10px;
+  padding-left: 2px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   color: #a9a9a9;
   text-decoration: line-through;
 }
 .tools-item .new-price{
+  position: relative;
+  width: 130px;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 0 auto;
+  margin-left: 43px;
+  padding: 10px 0;
+  padding-left: 35px;
   font-weight: bold;
   color: #ffffff;
   background-color: #ee3643;
   text-decoration: none;
+
+}
+.new-price::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 19px solid white;
+  border-left: 19px solid #ee3643;
+  right: -28px;
+  top: 0;
 }
 .brands {
   margin-bottom: 65px;
@@ -699,14 +735,27 @@ a.button-order:active {
 .brands-title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   background-color: #f9f5f0;
+  padding-bottom: 29px;
+  padding-top: 27px;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 .brands-title h2 {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
+  font-weight: 400;
+}
+.brands-title a {
+  padding-left: 67px;
+  padding-right: 70px;
+  padding-bottom: 8px;
 }
 .brands-list {
   display: flex;
@@ -720,7 +769,7 @@ a.button-order:active {
   margin-bottom: 20px;
   margin-right: 20px;
   border: 1px solid #eaeaea;
-  text-align: center;
+  min-height: 145px;
 }
 .brands-item:nth-child(4n) {
   margin-right: 0;
@@ -731,6 +780,11 @@ a.button-order:active {
 }
 .brands-item:active {
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+.brands-item a {
+  display: block;
+  margin: -2px 0;
+  padding: 0;
 }
 .brands-item:active a {
   opacity: 0.3;
