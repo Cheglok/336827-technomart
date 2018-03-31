@@ -48,10 +48,11 @@
             </li>
             <li><a class="registration" href="#">Регистрация</a></li> -->
             <li>
-              <a class="user-name" href="#">Равшан Джамшутович</a>
-              <div class="icon-user-name-container">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
-              </div>
+              <a class="user-name" href="#">Равшан Джамшутович
+                <div class="icon-user-name-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
+                </div>
+              </a>
             </li>
             <li>
               <a class="exit" href="#">
@@ -159,7 +160,7 @@
                 <legend>Питание:</legend>
                 <ul class="filter-list">
                   <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="electricity" id="battery" checked>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="electricity" id="battery" checked disabled>
                     <label for="battery">Аккумуляторные</label>
                   </li>
                   <li class="filter-option">
@@ -178,9 +179,13 @@
               <li><a class="current-sorting" href="#">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По функционалу</a></li>
-              <li class="markers">
-                <div class="triangle current-triangle">По возрастанию</div>
-                <div class="triangle">По убыванию</div>
+              <li class="marker marker-up marker-current">
+                <span class="visually-hidden">По возрастанию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+              </li>
+              <li class="marker marker-down">
+                <span class="visually-hidden">По убыванию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
               </li>
             </ul>
             <ul class="punchers-list">
@@ -220,7 +225,7 @@
                 </div>
                 <p class="new-price">25500 Р.</p>
               </li>
-              <li class="tools-item">
+              <li class="tools-item flag-new">
                 <div class="tools-image-wrapper">
                   <img src="img/puncher-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 </div>
@@ -256,7 +261,7 @@
                 </div>
                 <p class="new-price">15500 Р.</p>
               </li>
-              <li class="tools-item">
+              <li class="tools-item flag-new">
                 <div class="tools-image-wrapper">
                   <img src="img/puncher-6000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                 </div>
@@ -292,7 +297,7 @@
                 </div>
                 <p class="new-price">12500 Р.</p>
               </li>
-              <li class="tools-item">
+              <li class="tools-item flag-new">
                 <div class="tools-image-wrapper">
                   <img src="img/puncher-3000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 </div>
@@ -439,13 +444,18 @@
       </section>
     </footer>
     <section class="modal modal-bucket">
-      <h2 class="visually-hidden">Корзина</h2>
-      <p>Товар добавлен в корзину!</p>
+      <div class="modal-top">
+        <h2 class="visually-hidden">Корзина</h2>
+        <p>Товар добавлен в корзину!</p>
+      </div>
       <div class="modal-bottom">
         <a class="button red-button" href="#">Оформить заказ</a>
         <a class="button button-modal-continue" href="#">Продолжить покупки</a>
       </div>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#EE3643" d="M13.273 10.5l7.422-7.422a1.003 1.003 0 0 0 0-1.414L19.336.305a1.003 1.003 0 0 0-1.414 0L10.5 7.727 3.078.305a1.003 1.003 0 0 0-1.414 0L.305 1.664a1.003 1.003 0 0 0 0 1.414L7.727 10.5.306 17.922a1.003 1.003 0 0 0 0 1.414l1.359 1.359a1.003 1.003 0 0 0 1.414 0l7.422-7.422 7.422 7.422a1.003 1.003 0 0 0 1.414 0l1.359-1.359a1.003 1.003 0 0 0 0-1.414L13.273 10.5z"/></svg>
+      </button>
     </section>
   </body>
 </html>

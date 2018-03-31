@@ -47,8 +47,20 @@
               </div>
             </li>
             <li><a class="registration" href="#">Регистрация</a></li>
-            <!-- <li><a class="user-name" href="#">Равшан Джамшутович</a></li>
-            <li><a class="user-subnavigation" href="#">Мои заказы</a></li>
+            <!-- <li>
+              <a class="user-name" href="#">Равшан Джамшутович
+                <div class="icon-user-name-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="exit" href="#">
+                <span class="visually-hidden">Выход</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
+              </a>
+            </li>
+            <li><a class="user-subnavigation user-subnavigation-orders" href="#">Мои заказы</a></li>
             <li><a class="user-subnavigation" href="#">Личный кабинет</a></li> -->
           </ul>
           <nav class="site-navigation">
@@ -128,7 +140,7 @@
           </a>
           </div>
           <ul class="popular-tools-list">
-            <li class="tools-item">
+            <li class="tools-item popular-tools-item">
               <div class="tools-image-wrapper">
                 <img src="img/puncher-9000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
               </div>
@@ -146,7 +158,7 @@
               </div>
               <p class="new-price">25500 Р.</p>
             </li>
-            <li class="tools-item">
+            <li class="tools-item popular-tools-item">
               <div class="tools-image-wrapper">
                 <img src="img/puncher-3000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
               </div>
@@ -164,7 +176,7 @@
               </div>
               <p class="new-price">15500 Р.</p>
             </li>
-            <li class="tools-item">
+            <li class="tools-item popular-tools-item">
               <div class="tools-image-wrapper">
                 <img src="img/puncher-6000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
               </div>
@@ -182,7 +194,7 @@
               </div>
               <p class="new-price">25500 Р.</p>
             </li>
-            <li class="tools-item flag-new">
+            <li class="tools-item popular-tools-item flag-new">
               <div class="tools-image-wrapper">
                 <img src="img/puncher-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               </div>
@@ -211,28 +223,28 @@
           </div>
           <ul class="brands-list">
             <li class="brands-item">
-              <a href="#"><img src="img/bosch.png" width="218" height="145" alt="Bosch"></a>
+              <a href="#"><img src="img/bosch.png" width="218" height="143" alt="Bosch"></a>
             </li>
             <li class="brands-item">
-              <a href="#"><img src="img/makita.png" width="218" height="145" alt="Makita"></a>
+              <a href="#"><img src="img/makita.png" width="218" height="143" alt="Makita"></a>
             </li>
             <li class="brands-item">
-              <a href="#"><img src="img/dewalt.png" width="218" height="145" alt="DeWALT"></a>
+              <a href="#"><img src="img/dewalt.png" width="218" height="143" alt="DeWALT"></a>
             </li>
             <li class="brands-item">
-              <a href="#"><img src="img/interscol.png" width="218" height="145" alt="Интерскол"></a>
+              <a href="#"><img src="img/interscol.png" width="218" height="143" alt="Интерскол"></a>
             </li>
             <li class="brands-item">
-              <a href="#"><img src="img/hitachi.png" width="218" height="145" alt="Hitachi"></a>
+              <a href="#"><img src="img/hitachi.png" width="218" height="143" alt="Hitachi"></a>
             </li>
             <li class="brands-item">
-              <a href="#"><img src="img/lg.png" width="218" height="145" alt="LG"></a>
+              <a href="#"><img src="img/lg.png" width="218" height="143" alt="LG"></a>
             </li>
             <li class="brands-item">
-              <a href="#"><img src="img/aeg.png" width="218" height="145" alt="AEG"></a>
+              <a href="#"><img src="img/aeg.png" width="218" height="143" alt="AEG"></a>
             </li>
             <li class="brands-item">
-              <a href="#"><img src="img/metabo.png" width="218" height="145" alt="Metabo"></a>
+              <a href="#"><img src="img/metabo.png" width="218" height="143" alt="Metabo"></a>
             </li>
           </ul>
         </section>
@@ -395,22 +407,33 @@
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-        <label for="user-name">Ваше имя:</label>
-        <input type="text" name="user-name" id="user-name" placeholder="Представьтесь, пожалуйста">
-        <label for="user-email">Ваш e-mail:</label>
-        <input type="email" name="user-email" id="user-email" placeholder="Для отправки ответа">
-        <label for="letter">Текст письма:</label>
-        <textarea name="letter" id="letter" placeholder="В свободной форме" rows="5" cols="30"></textarea>
+        <div class="modal-top">
+          <div class="writer-name">
+            <label for="writer-name">Ваше имя:</label>
+            <input type="text" name="writer-name" id="writer-name" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="writer-email">
+            <label for="writer-email">Ваш e-mail:</label>
+            <input type="email" name="writer-email" id="writer-email" placeholder="Для отправки ответа">
+          </div>
+          <div class="letter">
+            <label for="letter">Текст письма:</label>
+            <textarea name="letter" id="letter" placeholder="В свободной форме" rows="5" cols="30"></textarea>
+          </div>
+        </div>
         <div class="modal-bottom">
           <button class="button red-button" type="submit">Отправить</button>
         </div>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#EE3643" d="M13.273 10.5l7.422-7.422a1.003 1.003 0 0 0 0-1.414L19.336.305a1.003 1.003 0 0 0-1.414 0L10.5 7.727 3.078.305a1.003 1.003 0 0 0-1.414 0L.305 1.664a1.003 1.003 0 0 0 0 1.414L7.727 10.5.306 17.922a1.003 1.003 0 0 0 0 1.414l1.359 1.359a1.003 1.003 0 0 0 1.414 0l7.422-7.422 7.422 7.422a1.003 1.003 0 0 0 1.414 0l1.359-1.359a1.003 1.003 0 0 0 0-1.414L13.273 10.5z"/></svg>
+      </button>
     </section>
-    <section class="modal modal-map-popup">
+    <!-- <section class="modal modal-map-popup">
       <h2 class="visually-hidden">Карта</h2>
       <img src="img/big-map.jpg" width="1736" height="779" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <button class="modal-close" type="button">Закрыть</button>
-    </section>
+    </section> -->
   </body>
 </html>
