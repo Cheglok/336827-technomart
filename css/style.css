@@ -323,6 +323,18 @@ a.button-order:active {
 
   list-style: none;
 }
+.user-navigation-authorized {
+  display: none;
+}
+.user-navigation-unauthorized {
+  display: flex;
+}
+.inner-page .user-navigation-authorized {
+  display: flex;
+}
+.inner-page .user-navigation-unauthorized {
+  display: none;
+}
 .user-navigation li {
   position: relative;
 }
