@@ -145,6 +145,10 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   opacity: 1;
 }
+.search-form input:focus::placeholder {
+  color: #000000;
+  opacity: 1;
+}
 .search-form input:hover {
   background-color: #212a3a;
 }
@@ -199,10 +203,11 @@ a.manage-basket::before {
   position: absolute;
   top: 12px;
   left: 17px;
-  width: 14px;
+  width: 16px;
   height: 16px;
 
   opacity: 0.3;
+  background-repeat: no-repeat;
 }
 a.manage-bookmark::before {
   background-image: url("../img/icon-bookmark.svg");
@@ -408,6 +413,8 @@ a.button-order:active {
   line-height: 18px;
   text-decoration: underline;
   color: #32425c;
+
+  background-color: #f2f6f8;
 }
 .user-navigation .user-subnavigation-orders {
   margin-left: 15px;
@@ -911,7 +918,7 @@ a.button-order:active {
 .popular-tools-item h3 {
   padding-top: 4px;
 }
-.old-price-placeholder {
+.old-price-wrapper {
   min-height: 28px;
 }
 .tools-item p {
@@ -1177,6 +1184,9 @@ p.services-tagline {
   padding: 0;
 }
 .services-description p {
+  display: block;
+
+  width: 278px;
   margin: 0;
   margin-bottom: 38px;
   padding: 0;
@@ -1208,6 +1218,8 @@ p.services-tagline {
 }
 .company p,
 .contacts p {
+  display: block;
+
   margin: 0;
   margin-bottom: 23px;
   padding: 0;
@@ -1216,6 +1228,12 @@ p.services-tagline {
   font-size: 13px;
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
+}
+.company p {
+  width: 520px;
+}
+.company p:last-of-type {
+  width: 400px;
 }
 .delivery-company {
   margin: 0;
@@ -1252,6 +1270,7 @@ p.services-tagline {
   width: 300px;
 }
 .contacts p {
+  width: 200px;
   margin-bottom: 33px;
 }
 .contacts .map {
@@ -1415,8 +1434,6 @@ p.services-tagline {
   list-style: none;
 }
 .breadcrumbs a {
-  position: relative;
-
   display: block;
   padding-right: 41px;
 
@@ -1427,21 +1444,23 @@ p.services-tagline {
 .breadcrumbs .home-icon {
   padding-right: 39px;
 }
-.breadcrumbs a::after {
+.breadcrumbs li {
+  position: relative;
+}
+.breadcrumbs li::after {
   content: "";
 
   position: absolute;
   transform: rotate(-45deg);
 
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   top: 5px;
   right: 21px;
 
   box-shadow: 2px 2px 1px 0px #dcdfe3;
-
 }
-.breadcrumbs a:last-child:after {
+.breadcrumbs li:last-child:after {
   display: none;
 }
 .inner-main {
@@ -1596,7 +1615,6 @@ p.services-tagline {
 }
 .filter-option {
   margin-bottom: 20px;
-  padding-left: 34px;
 }
 .filter-option:last-child {
   margin-bottom: 0;
@@ -1606,6 +1624,8 @@ p.services-tagline {
 
   display: block;
 
+  padding-left: 34px;
+
   cursor: pointer;
   user-select: none;
 }
@@ -1613,25 +1633,58 @@ p.services-tagline {
   content: "";
 
   position: absolute;
-  left: -34px;
+  left: 0px;
   top: -2px;
+  display: block;
 
-  width: 23px;
-  height: 23px;
+  width: 19px;
+  height: 19px;
 
-  background-image: url("../img/checkbox-off.svg");
+  border: 2px solid #c5c5c5;
+  border-radius: 2px;
 }
-.filter-input-checkbox:checked+label::before {
+.filter-input-checkbox:checked+label::after {
   content: "";
 
   position: absolute;
-  left: -34px;
+  left: 8px;
   top: -2px;
 
-  width: 27px;
-  height: 23px;
+  display: block;
 
-  background-image: url("../img/checkbox-on.svg");
+  width: 14px;
+  height: 5px;
+
+  box-shadow: -1px 1px 0 1px #ffffff,
+  -3px 3px 0 3px #c5c5c5,
+  -4px 4px 0 4px #ffffff;
+
+  transform: rotate(-45deg);
+}
+.filter-input-checkbox+label:hover::before,
+.filter-input-checkbox+label:focus::before {
+  border-color: #b5b5b5;
+}
+.filter-input-checkbox+label:hover::after,
+.filter-input-checkbox+label:focus::after {
+
+  box-shadow: -1px 1px 0 1px #ffffff,
+  -3px 3px 0 3px #b5b5b5,
+  -4px 4px 0 4px #ffffff;
+}
+.filter-input-checkbox:disabled+label::before {
+  border-color: #c5c5c5;
+  opacity: 0.3;
+}
+.filter-input-checkbox:disabled+label::after {
+
+  box-shadow: -1px 1px 0 1px #ffffff,
+  -3px 3px 0 3px #c5c5c5,
+  -4px 4px 0 4px #ffffff;
+  opacity: 0.3;
+}
+.radio {
+  fill: red;
 }
 .filter-battery legend {
   padding-top: 15px;
@@ -1640,25 +1693,45 @@ p.services-tagline {
   content: "";
 
   position: absolute;
-  left: -34px;
   top: -2px;
+  left: -1px;
 
-  width: 25px;
-  height: 25px;
+  display: block;
 
-  background-image: url("../img/radio-off.svg");
+  width: 17px;
+  height: 17px;
+
+  border: 4px solid #c5c5c5;
+  border-radius: 50%;
 }
-.filter-input-radio:checked+label::before {
+.filter-input-radio:checked+label::after {
   content: "";
 
   position: absolute;
-  left: -34px;
-  top: -2px;
+  top: 6px;
+  left: 7px;
 
-  width: 25px;
-  height: 25px;
+  width: 9px;
+  height: 9px;
 
-  background-image: url("../img/radio-on.svg");
+  background-color: #c5c5c5;
+  border-radius: 50%;
+}
+.filter-input-radio+label:hover::before,
+.filter-input-radio+label:focus::before {
+  border-color: #b5b5b5;
+}
+.filter-input-radio+label:hover::after,
+.filter-input-radio+label:focus::after {
+  background-color: #b5b5b5;
+}
+.filter-input-radio:disabled+label::before {
+  border-color: #c5c5c5;
+  opacity: 0.3;
+}
+.filter-input-radio:disabled+label::after {
+  background-color: #c5c5c5;
+  opacity: 0.3;
 }
 .filter button {
   margin-top: 78px;
@@ -1728,6 +1801,14 @@ p.services-tagline {
   margin-right: 0;
   margin-left: 20px;
   padding-top: 1px;
+}
+.marker a {
+  border: none;
+}
+.marker a:hover,
+.marker a:focus,
+.marker a:active {
+  border: none;
 }
 .marker path {
   fill: #c5c5c5;
@@ -1979,4 +2060,8 @@ p.services-tagline {
 
   background-color: #ffffff;
   border-radius: 3px;
+}
+.modal {
+  display: none;
+  position: fixed;
 }

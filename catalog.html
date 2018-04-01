@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
-    <!-- font-family: "Cuprum", Arial, sans-serif; -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <!-- font-family: "PT Sans", Arial, sans-serif; -->
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -135,6 +132,7 @@
                 <ul class="filter-list">
                   <li class="filter-option">
                     <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="bosch" checked>
+
                     <label for="bosch">Bosch</label>
                   </li>
                   <li class="filter-option">
@@ -160,7 +158,7 @@
                 <legend>Питание:</legend>
                 <ul class="filter-list">
                   <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="electricity" id="battery" checked disabled>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="electricity" id="battery" checked>
                     <label for="battery">Аккумуляторные</label>
                   </li>
                   <li class="filter-option">
@@ -180,12 +178,16 @@
               <li><a href="#">По типу</a></li>
               <li><a href="#">По функционалу</a></li>
               <li class="marker marker-up marker-current">
-                <span class="visually-hidden">По возрастанию</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+                <a href="#">
+                  <span class="visually-hidden">По возрастанию</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+                </a>
               </li>
               <li class="marker marker-down">
-                <span class="visually-hidden">По убыванию</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                <a href="#">
+                  <span class="visually-hidden">По убыванию</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                </a>
               </li>
             </ul>
             <ul class="punchers-list">
@@ -202,7 +204,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p>22500 Р.</p>
                 </div>
                 <p class="new-price">15500 Р.</p>
@@ -220,7 +222,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p>30500 Р.</p>
                 </div>
                 <p class="new-price">25500 Р.</p>
@@ -238,7 +240,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p></p>
                 </div>
                 <p class="new-price">12500 Р.</p>
@@ -256,7 +258,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p>22500 Р.</p>
                 </div>
                 <p class="new-price">15500 Р.</p>
@@ -274,7 +276,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p>30500 Р.</p>
                 </div>
                 <p class="new-price">25500 Р.</p>
@@ -292,7 +294,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p></p>
                 </div>
                 <p class="new-price">12500 Р.</p>
@@ -310,7 +312,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p>22500 Р.</p>
                 </div>
                 <p class="new-price">15500 Р.</p>
@@ -328,7 +330,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p>30500 Р.</p>
                 </div>
                 <p class="new-price">25500 Р.</p>
@@ -346,7 +348,7 @@
                     <a class="button button-bookmark" href="#">В закладки</a>
                   </li>
                 </ul>
-                <div class="old-price-placeholder">
+                <div class="old-price-wrapper">
                   <p></p>
                 </div>
                 <p class="new-price">12500 Р.</p>
@@ -364,7 +366,8 @@
       <section class="about-punchers">
         <div class="container">
           <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+          <p>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </section>
     </main>
@@ -373,7 +376,7 @@
         <div class="container">
           <h2 class="visually-hidden">Нижнее меню</h2>
           <div class="footer-address-wrapper">
-            <a class="logo logo-bottom">Техномарт</a>
+            <a class="logo logo-bottom" href="index.html">Техномарт</a>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
             +7 (812) 555-05-55</p>
           </div>
@@ -457,5 +460,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#EE3643" d="M13.273 10.5l7.422-7.422a1.003 1.003 0 0 0 0-1.414L19.336.305a1.003 1.003 0 0 0-1.414 0L10.5 7.727 3.078.305a1.003 1.003 0 0 0-1.414 0L.305 1.664a1.003 1.003 0 0 0 0 1.414L7.727 10.5.306 17.922a1.003 1.003 0 0 0 0 1.414l1.359 1.359a1.003 1.003 0 0 0 1.414 0l7.422-7.422 7.422 7.422a1.003 1.003 0 0 0 1.414 0l1.359-1.359a1.003 1.003 0 0 0 0-1.414L13.273 10.5z"/></svg>
       </button>
     </section>
+    <div class="exp">
+    </div>
   </body>
 </html>
