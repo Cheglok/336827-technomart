@@ -78,6 +78,11 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 .button {
   font: inherit;
   font-family: "Cuprum", Arial, sans-serif;
@@ -99,11 +104,6 @@ input[type="radio"].visually-hidden {
 }
 .red-button:active {
   background-color: #ba2732;
-}
-.container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 .main-header {
   margin-bottom: 59px;
@@ -1174,18 +1174,21 @@ a.button-order:active {
 .services {
   width: 100%;
   padding-top: 64px;
-  padding-bottom: 54px;
 
   background-color: #f4f8f9;
 }
 .services .container {
+  display: flex;
+  flex-wrap: wrap;
+
   width: 950px;
   padding-right: 0px;
 }
 .services h2 {
+  width: 100%;
   margin: 0;
   margin-bottom: 27px;
-  padding: 0;
+  padding: 0 10px 0 0;
 
   font-size: 30px;
   line-height: 30px;
@@ -1193,44 +1196,15 @@ a.button-order:active {
   font-weight: 400;
 }
 p.services-tagline {
-  width: 400px;
+  width: 100%;
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
+  padding-right: 550px;
 
   font-size: 13px;
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
-}
-.services-slider {
-  position: relative;
-
-  min-height: 274px;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-.services-slider-item {
-  position: absolute;
-
-  width: 100%;
-
-  background-color: #ffffff;
-}
-.delivery-slider {
-  z-index: 5;
-}
-.guarantee-slider {
-  z-index: 4;
-}
-.credit-slider {
-  z-index: 3;
-}
-.service-slide-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 .services-list {
   position: relative;
@@ -1284,28 +1258,44 @@ p.services-tagline {
   background-color: #ffffff;
   border: none;
 }
-.services-slider-item .services-description {
-  -ms-flex-preferred-size: 630px;
-      flex-basis: 630px;
-  padding-top: 43px;
-  padding-left: 80px;
+.services-slider {
+  width: 700px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
-  background-repeat: no-repeat;
+  list-style: none;
   background-color: #f4f8f9;
 }
-.delivery-slider .services-description {
+.services-slider-item {
+  display: none;
+
+  min-height: 275px;
+  padding-top: 43px;
+  padding-left: 80px;
+  padding-bottom: 10px;
+
+  background-repeat: no-repeat;
+}
+.delivery-slider {
+  display: block;
+
   background-image: url("../img/delivery.png");
   background-position: 230px 67px;
 }
-.guarantee-slider .services-description {
+.guarantee-slider {
+  /* display: block; */
+
   background-image: url("../img/guarantee.png");
   background-position: 319px 45px;
 }
-.credit-slider .services-description {
+.credit-slider {
+  /* display: block; */
+
   background-image: url("../img/credit.png");
   background-position: 245px 43px;
 }
-.services-description a {
+.services-slider a {
   margin: 0;
   padding: 0;
 
@@ -1315,7 +1305,7 @@ p.services-tagline {
   text-transform: uppercase;
   font-weight: 400;
 }
-.services-description .button {
+.services-slider .button {
   padding: 10px 44px;
 
   font-size: 14px;
@@ -1323,15 +1313,14 @@ p.services-tagline {
   font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
 }
-.services-description h3 {
+.services-slider h3 {
   margin: 0;
   margin-bottom: 23px;
   padding: 0;
 }
-.services-description p {
+.services-slider p {
   display: block;
 
-  width: 278px;
   margin: 0;
   margin-bottom: 38px;
   padding: 0;
@@ -1339,6 +1328,12 @@ p.services-tagline {
   font-size: 13px;
   line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
+}
+.delivery-slider p {
+  width: 278px;
+}
+.guarantee-slider p {
+  width: 375px;
 }
 .wrapper-company-contacts {
   display: -webkit-box;
@@ -2123,6 +2118,7 @@ p.services-tagline {
   line-height: 30px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
+  text-transform: uppercase;
 }
 .about-punchers p {
   margin: 0;
