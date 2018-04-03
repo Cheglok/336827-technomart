@@ -627,13 +627,11 @@ a.button-order:active {
   flex-wrap: wrap;
   align-items: flex-start;
 
-  padding-top: 114px;
-  padding-left: 25px;
-
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 620px;
-  min-height: 266px;
+  padding-top: 114px;
+  padding-left: 25px;
 }
 .slider-promo-manage .arrow {
   width: 22px;
@@ -2014,21 +2012,6 @@ p.services-tagline {
 .marker:active path {
   fill: #ee3643;
 }
-/* .sorting .triangle {
-  font-size: 0px;
-  line-height: 0px;
-  display: block;
-  width: 0px;
-  height: 0px;
-  border-top: 10px solid #231f20;
-  border-left: 5.5px solid transparent;
-  border-right: 5.5px solid transparent;
-  border-bottom: none;
-}
-.sorting .current-triangle {
-  border-top: none;
-  border-bottom: 10px solid #ee3643;
-} */
 .punchers-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2116,19 +2099,67 @@ p.services-tagline {
   font-size: 13px;
   line-height: 24px;
 }
+@keyframes bounce {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  70% {
+    transform: translateX(30px);
+  }
+
+  90% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
   top: 50%;
   left: 50%;
   z-index: 30;
 
+  display: none;
+
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: white;
 }
-.modal-write-us {
-  /* display: none; */
+.modal-show {
+  display: block;
 
+  animation: bounce 0.8s;
+}
+.modal-error {
+  animation: shake 0.6s;
+}
+.modal-write-us {
   width: 620px;
   margin: 50px auto;
   margin-left: -310px;
@@ -2208,28 +2239,41 @@ p.services-tagline {
   position: absolute;
   top: 9px;
   right: 9px;
+  z-index: 3;
 
-  width: 21px;
-  height: 21px;
+  width: 42px;
+  height: 42px;
   margin: 0;
   padding: 0;
 
   border: none;
   background-image: url("../img/form-2.svg");
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: top right;
   cursor: pointer;
 }
 .modal-map-popup {
-  display: none;
-
   margin-left: -470px;
   margin-top: -220px;
   -webkit-box-shadow: 0px 0px 16px 8px rgba(47, 42, 43, 0.5);
           box-shadow: 0px 0px 16px 8px rgba(47, 42, 43, 0.5);
 }
-.modal-bucket {
-  display: none;
+.modal-map-popup p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 
+  margin: 0;
+}
+.modal-map-popup iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+.modal-bucket {
   width: 620px;
   margin-left: -310px;
   margin-top: -141px;
