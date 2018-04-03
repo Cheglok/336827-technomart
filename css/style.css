@@ -358,7 +358,6 @@ a.button-order:active {
   position: relative;
 
   -webkit-box-sizing: border-box;
-
           box-sizing: border-box;
   width: 270px;
   margin: 0;
@@ -631,8 +630,9 @@ a.button-order:active {
   padding-top: 114px;
   padding-left: 25px;
 
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 620px;
-  box-sizing: border-box;
   min-height: 266px;
 }
 .slider-promo-manage .arrow {
@@ -1047,9 +1047,9 @@ a.button-order:active {
 .tools-item .new-price {
   position: relative;
 
-  width: 130px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  width: 130px;
   margin: 0 auto;
   margin-left: 41px;
   padding: 10px 0;
@@ -1239,8 +1239,9 @@ p.services-tagline {
   border: none;
 }
 .services-slider {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 700px;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 
@@ -1833,11 +1834,15 @@ p.services-tagline {
           transform: rotate(-45deg);
 }
 .filter-input-checkbox+label:hover::before,
-.filter-input-checkbox+label:focus::before {
+.filter-input-checkbox:focus+label::before {
   border-color: #b5b5b5;
 }
+.filter-input-checkbox:focus+label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
 .filter-input-checkbox+label:hover::after,
-.filter-input-checkbox+label:focus::after {
+.filter-input-checkbox:focus+label::after {
 
   -webkit-box-shadow: -1px 1px 0 1px #ffffff,
   -3px 3px 0 3px #b5b5b5,
@@ -1897,11 +1902,15 @@ p.services-tagline {
   border-radius: 50%;
 }
 .filter-input-radio+label:hover::before,
-.filter-input-radio+label:focus::before {
+.filter-input-radio:focus+label::before {
   border-color: #b5b5b5;
 }
+.filter-input-radio:focus+label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
 .filter-input-radio+label:hover::after,
-.filter-input-radio+label:focus::after {
+.filter-input-radio:focus+label::after {
   background-color: #b5b5b5;
 }
 .filter-input-radio:disabled+label::before {
@@ -2111,8 +2120,8 @@ p.services-tagline {
   position: fixed;
   top: 50%;
   left: 50%;
-
   z-index: 30;
+
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: white;
@@ -2156,9 +2165,9 @@ p.services-tagline {
 }
 .modal-write-us input,
 .modal-write-us textarea {
-  width: 220px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  width: 220px;
   margin-bottom: 21px;
   padding: 7px 14px;
   padding-bottom: 10px;
