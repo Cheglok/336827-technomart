@@ -2127,7 +2127,7 @@ p.services-tagline {
   background-color: white;
 }
 .modal-write-us {
-  display: none;
+  /* display: none; */
 
   width: 620px;
   margin: 50px auto;
@@ -2150,6 +2150,12 @@ p.services-tagline {
 
   padding: 47px 80px;
   padding-bottom: 0;
+}
+.modal-write-us p {
+  display: block;
+
+  margin: 0;
+  padding: 0;
 }
 .modal-write-us label {
   display: block;
