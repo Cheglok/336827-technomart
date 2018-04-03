@@ -462,40 +462,6 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
-    <div class="exp">
-    </div>
-    <script>
-      var link = document.querySelector(".button-buy");
-
-      var popup = document.querySelector(".modal-bucket");
-
-      var close = popup.querySelector(".modal-close");
-
-      var carry = popup.querySelector(".button-modal-carry");
-
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-      });
-
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-      });
-
-      carry.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-      });
-
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popup.classList.contains("modal-show")) {
-            popup.classList.remove("modal-show");
-          }
-        }
-      });
-    </script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
