@@ -2,7 +2,7 @@ var bucketLink = document.querySelector(".button-buy");
 
 var bucketPopup = document.querySelector(".modal-bucket");
 
-var close = bucketPopup.querySelector(".modal-close");
+var bucketClose = bucketPopup.querySelector(".modal-close");
 
 var bucketCarry = bucketPopup.querySelector(".button-modal-carry");
 
@@ -10,7 +10,7 @@ bucketLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   bucketPopup.classList.add("modal-show");
 });
-close.addEventListener("click", function (evt) {
+bucketClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   bucketPopup.classList.remove("modal-show");
 });
