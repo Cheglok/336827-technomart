@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <!-- <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> -->
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -96,20 +96,19 @@
         <h1 class="visually-hidden">Техномарт</h1>
         <section class="features">
           <h2 class="visually-hidden">Преимущества</h2>
+          <input class="visually-hidden" type="checkbox" id="control">
           <ul class="features-list">
             <li class="slider-promo">
               <div class="slider-promo-manage">
-                <div class="arrow arrow-left"></div>
-                <div class="arrow arrow-right"></div>
+                <label for="control" class="arrow arrow-left"></label>
+                <label  for="control" class="arrow arrow-right"></label>
                 <a class="button red-button" href="catalog.html">Открыть каталог</a>
-                <div class="indicator"></div>
-                <div class="indicator active-indicator"></div>
               </div>
-              <div class="slide-promo slide-promo-1">
+              <div class="slide-promo slide-promo-1" id="slide1">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
               </div>
-              <div class="slide-promo slide-promo-2">
+              <div class="slide-promo slide-promo-2" id="slide2">
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
               </div>

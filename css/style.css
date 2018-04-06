@@ -641,9 +641,15 @@ a.button-order:active {
   padding-left: 25px;
 }
 .slider-promo-manage .arrow {
+  display: block;
+
   width: 22px;
   height: 40px;
+  margin: 0;
   margin-bottom: 52px;
+  padding: 0;
+
+  cursor: pointer;
 }
 .slider-promo-manage .arrow-left {
   background: url("../img/icon-left.svg");
@@ -663,38 +669,53 @@ a.button-order:active {
 
   border-radius: 3px;
 }
-.slider-promo-manage .indicator {
+.slider-promo-manage::before,
+.slider-promo-manage::after {
+  content: "";
+
+  position: absolute;
+  top: 220px;
+  left: 315px;
+
   width: 6px;
   height: 6px;
-  margin-right: 10px;
-  margin-top: 14px;
 
   background-color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 5px;
 }
-.slider-promo-manage .active-indicator {
-  background-color: #ee3643;
+.slider-promo-manage::after {
+  top: 220px;
+  left: 295px;
 }
-.slider-promo .slide-promo-1,
-.slider-promo .slide-promo-2 {
-  display: none;
-
+.slide-promo-1,
+.slide-promo-2 {
   width: 620px;
   min-height: 266px;
 
   background-color: #413935;
   background-repeat: no-repeat;
 }
-.slider-promo .slide-promo-1 {
-  /* display: block; */
-
+.slide-promo-1 {
   background-image: url("../img/slide-1.jpg");
 }
-.slider-promo .slide-promo-2 {
-  display: block;
-
+.slide-promo-2 {
   background-image: url("../img/slide-2.jpg");
+}
+input+.features-list .slide-promo-2,
+input:checked+.features-list .slide-promo-1 {
+  display: block;
+}
+input+.features-list .slide-promo-1,
+input:checked+.features-list .slide-promo-2 {
+  display: none;
+}
+input+.features-list .slider-promo-manage::before,
+input:checked+.features-list .slider-promo-manage::after {
+  background-color: #ee3643;
+}
+input:checked+.features-list .slider-promo-manage::before {
+  background-color: #ffffff;
 }
 .slider-promo h3 {
   margin: 0;
@@ -1273,7 +1294,7 @@ p.services-tagline {
   background-position: 230px 67px;
 }
 .guarantee-slider {
-  /* display: block; */
+  /* display: block;
 
   background-image: url("../img/guarantee.png");
   background-position: 319px 45px;
