@@ -96,9 +96,9 @@
         <h1 class="visually-hidden">Техномарт</h1>
         <section class="features">
           <h2 class="visually-hidden">Преимущества</h2>
-          <input class="visually-hidden" type="checkbox" id="control">
           <ul class="features-list">
             <li class="slider-promo">
+              <input class="visually-hidden" type="checkbox" id="control">
               <div class="slider-promo-manage">
                 <label for="control" class="arrow arrow-left"></label>
                 <label  for="control" class="arrow arrow-right"></label>
@@ -256,10 +256,13 @@
         <div class="container">
           <h2>Сервисы</h2>
           <p class="services-tagline">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+          <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+          <input class="visually-hidden" type="radio" id="product-3" name="toggle">
           <ul class="services-list">
-            <li class="current">Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
+            <li><label for="product-1">Доставка</label></li>
+            <li><label for="product-2">Гарантия</label></li>
+            <li><label for="product-3">Кредит</label></li>
           </ul>
           <ul class="services-slider">
             <li class="services-slider-item delivery-slider">

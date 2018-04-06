@@ -702,19 +702,19 @@ a.button-order:active {
 .slide-promo-2 {
   background-image: url("../img/slide-2.jpg");
 }
-input+.features-list .slide-promo-2,
-input:checked+.features-list .slide-promo-1 {
+#control ~ .slide-promo-2,
+#control:checked ~ .slide-promo-1 {
   display: block;
 }
-input+.features-list .slide-promo-1,
-input:checked+.features-list .slide-promo-2 {
+#control ~ .slide-promo-1,
+#control:checked ~ .slide-promo-2 {
   display: none;
 }
-input+.features-list .slider-promo-manage::before,
-input:checked+.features-list .slider-promo-manage::after {
+#control ~ .slider-promo-manage::before,
+#control:checked ~ .slider-promo-manage::after {
   background-color: #ee3643;
 }
-input:checked+.features-list .slider-promo-manage::before {
+#control:checked ~ .slider-promo-manage::before {
   background-color: #ffffff;
 }
 .slider-promo h3 {
@@ -1239,7 +1239,8 @@ p.services-tagline {
 
   background-image: url("../img/shadow.png");
 }
-.services-list li {
+.services-list label {
+  display: block;
   padding-top: 14px;
   padding-bottom: 16px;
   padding-left: 22px;
@@ -1253,15 +1254,14 @@ p.services-tagline {
   border-bottom: 1px solid #293449;
   border-top: 1px solid #405069;
 }
-.services-list li:last-child {
-  padding-bottom: 17px;
-}
-.services-list li:hover,
-.services-list li:focus,
-.services-list li:active {
+.services-list label:hover,
+.services-list label:focus,
+.services-list label:active {
   background-color: #293449;
 }
-.services-list .current {
+#product-1:checked ~ .services-list label[for="product-1"],
+#product-2:checked ~ .services-list label[for="product-2"],
+#product-3:checked ~ .services-list label[for="product-3"] {
   color: #32425c;
 
   background-color: #ffffff;
@@ -1270,7 +1270,7 @@ p.services-tagline {
 .services-slider {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 700px;
+  width: 710px;
   margin: 0;
   padding: 0;
 
@@ -1288,22 +1288,21 @@ p.services-tagline {
   background-repeat: no-repeat;
 }
 .delivery-slider {
-  display: block;
-
   background-image: url("../img/delivery.png");
   background-position: 230px 67px;
 }
 .guarantee-slider {
-  /* display: block;
-
   background-image: url("../img/guarantee.png");
   background-position: 319px 45px;
 }
 .credit-slider {
-  /* display: block; */
-
   background-image: url("../img/credit.png");
   background-position: 245px 43px;
+}
+#product-1:checked ~ .services-slider .delivery-slider,
+#product-2:checked ~ .services-slider .guarantee-slider,
+#product-3:checked ~ .services-slider .credit-slider {
+  display: block;
 }
 .services-slider a {
   margin: 0;
